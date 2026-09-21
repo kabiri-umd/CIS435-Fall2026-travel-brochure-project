@@ -1,0 +1,173 @@
+/* CSS Variables */
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #ECF0F1;
+    --text-color: #333333;
+    --accent-color: #E74C3C;
+    --spacing: 20px;
+}
+
+/* Global Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base Body & Grid Layout */
+body {
+    font-family: Arial, sans-serif;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* Header & Flexbox Nav */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing);
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing);
+    list-style: none;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover, button:hover {
+    color: var(--secondary-color);
+    opacity: 0.8;
+}
+
+/* Main Content Grid */
+main {
+    padding: var(--spacing);
+    display: grid;
+    gap: var(--spacing);
+}
+
+section {
+    background-color: white;
+    padding: var(--spacing);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Responsive Media */
+.responsive-image {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Form & Flexbox Alignment */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+input, select, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: var(--spacing);
+}
+
+/* Media Queries for Responsive Design */
+
+/* Small Screens (<= 768px) stack vertically by default based on the CSS above */
+
+/* Medium Screens (Tablets, 768px - 1023px) */
+@media (min-width: 768px) {
+    main {
+        padding: calc(var(--spacing) * 2);
+    }
+    
+    .form-group {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .form-group label {
+        width: 180px;
+        margin-bottom: 0;
+    }
+    
+    .form-group input, 
+    .form-group select, 
+    .form-group textarea {
+        flex: 1;
+    }
+}
+
+/* Large Screens (Desktops, >= 1024px) */
+@media (min-width: 1024px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    #about {
+        grid-column: 1 / span 2; /* Full width for the About section */
+    }
+}
