@@ -19,13 +19,10 @@ This project is a responsive and visually appealing travel brochure for a fictio
 Here is how the application looks across different device viewports:
 
 ### Desktop View (>= 1024px)
-![Desktop View](html_view_Desktop.jpg)
+![Desktop View](html_view_Desktop.png)
 
 ### Tablet View (768px - 1023px)
-![Tablet View](html_view_Tablet.jpg)
+![Tablet View](html_view_Tablet.png)
 
 ### Mobile View (<= 768px)
 ![Mobile View](html_view_Mobile.png)
-
-### Repository Files
-![Project Files](image_2e997f.png)
